@@ -14,7 +14,10 @@ class Principal{
 	Globo ** vGlobos;
 	Data data;
 	public:
+		
 		void cargarDatos(){
+			Consumo **conshelp;
+			vGlobos = new Globo*[data.getLongitud()];
 			
 			char fdat[50],testdat[50],codetest[50],codetest2[50],name[50],plsnext[50],plsnext2[50];
 			//fdat contains the first string
@@ -51,6 +54,9 @@ class Principal{
 				
 				//Now, it's time to save
 				//pls don't explode
+				
+				//vGlobos[x] = new Globo(codetest,name,atoi(plsnext),);
+				
 			}
 		}
 		void mostrarDatos(){
@@ -61,6 +67,10 @@ class Principal{
 int main(int argc, char** argv) {
 	Principal x;
 	x.cargarDatos();
+	Consumo **y;
+	y = new Consumo*[1];
+	y[0] = new Consumo("epale",2);
+	
 	return 0;
 }
 

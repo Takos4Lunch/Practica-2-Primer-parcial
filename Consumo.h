@@ -6,8 +6,8 @@ class Consumo{
 	int cantidad;
 	public:
 		Consumo();//Constructor
-		Consumo(char* a, int b);//Parametric constructor
-		char getUnidadMedida();
+		Consumo(char * a, int b);//Parametric constructor
+		char* getUnidadMedida();
 		int getCantidad();
 		virtual void mostrar();
 };

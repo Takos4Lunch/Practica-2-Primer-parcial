@@ -12,14 +12,14 @@ Consumo::Consumo(char * a, int b){
 	strcpy(this->unidadMedida,a);
 }
 
-char Consumo::getUnidadMedida(){
-	
+char* Consumo::getUnidadMedida(){
+	return this->unidadMedida;
 }
 
 int Consumo::getCantidad(){
-	
+	return this->cantidad;
 }
 
 void Consumo::mostrar(){
-	
+	std::cout<<"epale";
 }

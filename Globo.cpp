@@ -33,5 +33,10 @@ Globo::Globo(char *cod, char *prop, int cant, Consumo ** cnsm){
 }
 
 void Globo::mostrarepa(){
-	cout<<
+	cout<<codigo<<endl;
+	cout<<propietario<<endl;
+	cout<<cantidadMediciones<<endl;
+	for(int x=0;x<cantidadMediciones;x++){
+		consumos[x]->mostrar();
+	}
 }

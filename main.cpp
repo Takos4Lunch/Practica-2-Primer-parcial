@@ -44,7 +44,7 @@ class Principal{
 				
 				helper = atoi(plsnext2);
 				
-				cout<<"cantidad de mediciones : "<<plsnext<<endl;
+				//cout<<"cantidad de mediciones : "<<plsnext<<endl;
 				vectlenght = atoi(plsnext);
 				conshelp = new Consumo * [vectlenght];
 				
@@ -62,10 +62,11 @@ class Principal{
 						conshelp[z] = new Consumo();
 					}
 					
-					cout<<result<<endl;
+					//cout<<result<<endl;
 					helper = helper>>4;
 				}
 				vGlobos[x] = new Globo(codetest,name,atoi(plsnext),conshelp);
+				vGlobos[x]->mostrarepa();
 				delete [] conshelp;
 			}
 		}

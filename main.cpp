@@ -7,6 +7,7 @@
 #include <cstring>
 #include <stdlib.h>
 #include <stdio.h>
+#include <typeinfo>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -84,13 +85,24 @@ class Principal{
 				cout<<"Codigo: "<<ayudante1<<endl;
 				cout<<"Propietario: "<<ayudante2<<endl;
 				cout<<"Nro de mediciones: "<<ayudante3<<endl;
-				
+				fr = 0;
+				hel = 0;
+				cantrang = 0;
 				cnsm = new Consumo*[ayudante3];
 				cnsm = vGlobos[x]->getConsumos();
 				for(int y=0;y<ayudante3;y++){
-					cnsm[y]->mostrar();
+					if(typeid(*cnsm[y])==typeid(Freon12)){
+						fr = fr + cnsm[y]->getCantidad();
+					}else if(typeid(*cnsm[y])==typeid(Helio)){
+						hel = hel + cnsm[y]->getCantidad();
+					}else{
+						cantrang++;
+					}
 				}
 				
+				cout<<"Helio usado: "<<hel<<" litros"<<endl;
+				cout<<"Freon12 usado: "<<fr<<" gramos"<<endl;
+				cout<<cantrang<<" veces se mantuvo dentro del rango de seguridad"<<endl;
 				cout<<""<<endl;
 			}
 		}

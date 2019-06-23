@@ -6,6 +6,7 @@
 #include "Globo.h"
 #include <cstring>
 #include <stdlib.h>
+#include <stdio.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -23,13 +24,7 @@ class Principal{
 			int result, helper;
 			
 			char fdat[50],testdat[50],codetest[50],codetest2[50],name[50],plsnext[50],plsnext2[50];
-			//fdat contains the first string
-			//testdat contains the second string
-			//codetest contains the code
-			//codetest2 contains the code from the other one
-			//plsnext is the one im searching for in times of need
 			
-			//This for loop opens pandora's box
 			for(int x=0;x<data.getLongitud();x++){
 				 
 				strcpy(fdat,data.getDatosGlobo(x));
@@ -47,27 +42,26 @@ class Principal{
 					}
 				}
 				
-				//cout<<fdat<<endl;
-				//cout<<codetest<<endl;
-				//cout<<name<<endl;
-				//cout<<testdat<<endl;
-				//cout<<codetest2<<endl;
-				//cout<<plsnext<<endl;
-				//cout<<plsnext2<<endl;
-				
-				//Now, it's time to save
-				//pls don't explode
-				
-				//At this point, we bits & fill consumo
-				
 				helper = atoi(plsnext2);
 				
+				cout<<"cantidad de mediciones : "<<plsnext<<endl;
+				conshelp = new Consumo * [atoi(plsnext)];
 				for(int z = 0;z<atoi(plsnext);z++){
 					//Aqui desenmascaro y guardo
 					//Aqui corro bits y lleno el vector de consumos
 					result = helper & mask;
-					cout<<result<<endl;
+					result = result*100;
 					
+					/*if(result>1196.58){
+						conshelp[z] = new Freon12("Gramos",350);
+					}else if(result<740.41){
+						conshelp[z] = new Helio("Litros",0.5);
+					}else{
+						conshelp[z] = new Consumo();
+					}*/
+					
+					cout<<result<<endl;
+					helper = helper>>4;
 				}
 				//vGlobos[x] = new Globo(codetest,name,atoi(plsnext),);
 				

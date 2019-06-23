@@ -65,7 +65,7 @@ class Principal{
 					cout<<result<<endl;
 					helper = helper>>4;
 				}
-				//vGlobos[x] = new Globo(codetest,name,atoi(plsnext),);
+				vGlobos[x] = new Globo(codetest,name,atoi(plsnext),conshelp);
 				delete [] conshelp;
 			}
 		}
@@ -76,6 +76,7 @@ class Principal{
 
 int main(int argc, char** argv) {
 	Principal x;
+	x.cargarDatos();
 	Consumo **y;
 	y = new Consumo*[1];
 	y[0] = new Freon12("epale",2);

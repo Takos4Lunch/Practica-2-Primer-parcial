@@ -86,9 +86,9 @@ class Principal{
 				cout<<"Nro de mediciones: "<<ayudante3<<endl;
 				
 				cnsm = new Consumo*[ayudante3];
-				
+				cnsm = vGlobos[x]->getConsumos();
 				for(int y=0;y<ayudante3;y++){
-					
+					cnsm[y]->mostrar();
 				}
 				
 				cout<<""<<endl;

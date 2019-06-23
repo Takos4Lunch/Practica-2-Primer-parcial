@@ -21,7 +21,7 @@ class Principal{
 			Consumo **conshelp;
 			vGlobos = new Globo*[data.getLongitud()];
 			int mask = 15;
-			int result, helper;
+			int result, helper, vectlenght;
 			
 			char fdat[50],testdat[50],codetest[50],codetest2[50],name[50],plsnext[50],plsnext2[50];
 			
@@ -45,26 +45,28 @@ class Principal{
 				helper = atoi(plsnext2);
 				
 				cout<<"cantidad de mediciones : "<<plsnext<<endl;
-				conshelp = new Consumo * [atoi(plsnext)];
-				for(int z = 0;z<atoi(plsnext);z++){
+				vectlenght = atoi(plsnext);
+				conshelp = new Consumo * [vectlenght];
+				
+				for(int z = 0;z<vectlenght;z++){
 					//Aqui desenmascaro y guardo
 					//Aqui corro bits y lleno el vector de consumos
 					result = helper & mask;
 					result = result*100;
 					
-					/*if(result>1196.58){
+					if(result>1196.58){
 						conshelp[z] = new Freon12("Gramos",350);
 					}else if(result<740.41){
 						conshelp[z] = new Helio("Litros",0.5);
 					}else{
 						conshelp[z] = new Consumo();
-					}*/
+					}
 					
 					cout<<result<<endl;
 					helper = helper>>4;
 				}
 				//vGlobos[x] = new Globo(codetest,name,atoi(plsnext),);
-				
+				delete [] conshelp;
 			}
 		}
 		void mostrarDatos(){
@@ -74,10 +76,10 @@ class Principal{
 
 int main(int argc, char** argv) {
 	Principal x;
-	x.cargarDatos();
 	Consumo **y;
 	y = new Consumo*[1];
-	y[0] = new Consumo("epale",2);
+	y[0] = new Freon12("epale",2);
+	y[0]->mostrar();
 	
 	return 0;
 }

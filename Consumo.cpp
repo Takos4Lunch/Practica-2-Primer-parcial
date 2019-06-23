@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstring>
 
+using namespace std;
+
 Consumo::Consumo(){
 	this->cantidad = 0;
 	strcpy(this->unidadMedida,"");
@@ -21,5 +23,6 @@ int Consumo::getCantidad(){
 }
 
 void Consumo::mostrar(){
-	std::cout<<"epale";
+	cout<<this->unidadMedida<<endl;
+	cout<<this->cantidad<<endl;
 }

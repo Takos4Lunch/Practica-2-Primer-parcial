@@ -31,3 +31,7 @@ Globo::Globo(char *cod, char *prop, int cant, Consumo ** cnsm){
 		}
 	}
 }
+
+void Globo::mostrarepa(){
+	cout<<
+}

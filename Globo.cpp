@@ -44,6 +44,10 @@ int Globo::getMediciones(){
 	return this->cantidadMediciones;
 }
 
+Consumo ** Globo::getConsumos(){
+	return this->consumos;
+}
+
 void Globo::mostrarepa(){
 	cout<<codigo<<endl;
 	cout<<propietario<<endl;

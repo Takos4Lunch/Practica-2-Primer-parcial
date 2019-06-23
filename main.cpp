@@ -69,9 +69,12 @@ class Principal{
 				delete [] conshelp;
 			}
 		}
+		
 		void mostrarDatos(){
 			char ayudante1[50], ayudante2[50];
 			int ayudante3;
+			int fr, hel, cantfr, canthel, cantrang;
+			Consumo **cnsm;
 			
 			for(int x =0;x<data.getLongitud();x++){
 				strcpy(ayudante1,vGlobos[x]->getCodigo());
@@ -82,7 +85,11 @@ class Principal{
 				cout<<"Propietario: "<<ayudante2<<endl;
 				cout<<"Nro de mediciones: "<<ayudante3<<endl;
 				
+				cnsm = new Consumo*[ayudante3];
 				
+				for(int y=0;y<ayudante3;y++){
+					
+				}
 				
 				cout<<""<<endl;
 			}

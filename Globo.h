@@ -11,8 +11,8 @@ class Globo{
 	public:
 		Globo();//Constructor
 		Globo(char *cod, char *prop, int cant, Consumo ** cnsm);//Parametric Constructor
-		char getCodigo();
-		char getPropietario();
+		char *getCodigo();
+		char *getPropietario();
 		int getMediciones();
 		Consumo ** getConsumos();
 		void mostrarepa();

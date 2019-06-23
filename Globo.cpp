@@ -32,6 +32,18 @@ Globo::Globo(char *cod, char *prop, int cant, Consumo ** cnsm){
 	}
 }
 
+char *Globo::getCodigo(){
+	return this->codigo;
+}
+
+char *Globo::getPropietario(){
+	return this->propietario;
+}
+
+int Globo::getMediciones(){
+	return this->cantidadMediciones;
+}
+
 void Globo::mostrarepa(){
 	cout<<codigo<<endl;
 	cout<<propietario<<endl;

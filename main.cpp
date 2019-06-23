@@ -66,23 +66,33 @@ class Principal{
 					helper = helper>>4;
 				}
 				vGlobos[x] = new Globo(codetest,name,atoi(plsnext),conshelp);
-				vGlobos[x]->mostrarepa();
 				delete [] conshelp;
 			}
 		}
 		void mostrarDatos(){
+			char ayudante1[50], ayudante2[50];
+			int ayudante3;
 			
+			for(int x =0;x<data.getLongitud();x++){
+				strcpy(ayudante1,vGlobos[x]->getCodigo());
+				strcpy(ayudante2,vGlobos[x]->getPropietario());
+				ayudante3 = vGlobos[x]->getMediciones();
+				cout<<"Globo Nro :"<<x+1<<endl;
+				cout<<"Codigo: "<<ayudante1<<endl;
+				cout<<"Propietario: "<<ayudante2<<endl;
+				cout<<"Nro de mediciones: "<<ayudante3<<endl;
+				
+				
+				
+				cout<<""<<endl;
+			}
 		}
 };
 
 int main(int argc, char** argv) {
 	Principal x;
 	x.cargarDatos();
-	Consumo **y;
-	y = new Consumo*[1];
-	y[0] = new Freon12("epale",2);
-	y[0]->mostrar();
-	
+	x.mostrarDatos();
 	return 0;
 }
 

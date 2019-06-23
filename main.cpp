@@ -20,7 +20,7 @@ class Principal{
 			Consumo **conshelp;
 			vGlobos = new Globo*[data.getLongitud()];
 			int mask = 15;
-			int result;
+			int result, helper;
 			
 			char fdat[50],testdat[50],codetest[50],codetest2[50],name[50],plsnext[50],plsnext2[50];
 			//fdat contains the first string
@@ -47,20 +47,28 @@ class Principal{
 					}
 				}
 				
-				cout<<fdat<<endl;
-				cout<<codetest<<endl;
-				cout<<name<<endl;
-				cout<<testdat<<endl;
-				cout<<codetest2<<endl;
-				cout<<plsnext<<endl;
-				cout<<plsnext2<<endl;
+				//cout<<fdat<<endl;
+				//cout<<codetest<<endl;
+				//cout<<name<<endl;
+				//cout<<testdat<<endl;
+				//cout<<codetest2<<endl;
+				//cout<<plsnext<<endl;
+				//cout<<plsnext2<<endl;
 				
 				//Now, it's time to save
 				//pls don't explode
 				
-				//At this point, we bits
-				result = atoi(plsnext2) & mask; //it works!
-				cout<<result<<endl;
+				//At this point, we bits & fill consumo
+				
+				helper = atoi(plsnext2);
+				
+				for(int z = 0;z<atoi(plsnext);z++){
+					//Aqui desenmascaro y guardo
+					//Aqui corro bits y lleno el vector de consumos
+					result = helper & mask;
+					cout<<result<<endl;
+					
+				}
 				//vGlobos[x] = new Globo(codetest,name,atoi(plsnext),);
 				
 			}

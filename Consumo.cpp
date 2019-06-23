@@ -9,12 +9,12 @@ Consumo::Consumo(){
 	strcpy(this->unidadMedida,"");
 }
 
-Consumo::Consumo(char * a, int b){
+Consumo::Consumo(char *a, int b){
 	this->cantidad = b;
 	strcpy(this->unidadMedida,a);
 }
 
-char* Consumo::getUnidadMedida(){
+char *Consumo::getUnidadMedida(){
 	return this->unidadMedida;
 }
 

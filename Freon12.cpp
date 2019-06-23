@@ -10,13 +10,13 @@ Freon12::Freon12():Consumo(){
 	
 }
 
-Freon12::Freon12(char * a, int b):Consumo(a,b){
+Freon12::Freon12(char *a, int b):Consumo(a,b){
 
 }
 
 void Freon12::mostrar(){
 	int x = getCantidad();
-	char *y;
+	char y[50];
 	strcpy(y,getUnidadMedida());
 	cout<<x<<endl;
 	cout<<y<<endl;

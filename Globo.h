@@ -10,7 +10,7 @@ class Globo{
 	Consumo **consumos;
 	public:
 		Globo();//Constructor
-		Globo(char * cod, char* prop, int cant, Consumo ** cnsm);//Parametric Constructor
+		Globo(char cod, char prop, int cant, Consumo ** cnsm);//Parametric Constructor
 		char getCodigo();
 		char getPropietario();
 		int getMediciones();

@@ -7,7 +7,7 @@ Helio::Helio():Consumo(){
 	
 }
 
-Helio::Helio(char * a, int b):Consumo(a,b){
+Helio::Helio(char *a, int b):Consumo(a,b){
 	
 }
 

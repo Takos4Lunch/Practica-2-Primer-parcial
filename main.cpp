@@ -5,6 +5,7 @@
 #include "Helio.h"
 #include "Globo.h"
 #include <cstring>
+#include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -18,6 +19,8 @@ class Principal{
 		void cargarDatos(){
 			Consumo **conshelp;
 			vGlobos = new Globo*[data.getLongitud()];
+			int mask = 15;
+			int result;
 			
 			char fdat[50],testdat[50],codetest[50],codetest2[50],name[50],plsnext[50],plsnext2[50];
 			//fdat contains the first string
@@ -55,6 +58,9 @@ class Principal{
 				//Now, it's time to save
 				//pls don't explode
 				
+				//At this point, we bits
+				result = atoi(plsnext2) & mask; //it works!
+				cout<<result<<endl;
 				//vGlobos[x] = new Globo(codetest,name,atoi(plsnext),);
 				
 			}

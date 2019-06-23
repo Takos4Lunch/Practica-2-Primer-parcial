@@ -8,6 +8,13 @@
 
 class Principal{
 	Globo * vGlobos;
+	public:
+		void cargarDatos(){
+			
+		}
+		void mostrarDatos(){
+			
+		}
 };
 
 int main(int argc, char** argv) {
